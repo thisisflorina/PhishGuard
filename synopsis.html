@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Synopsis: Phishing Website Blocker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: "Cool Blues" -->
+    <!-- Application Structure Plan: A single-page, vertical-scrolling layout with a sticky top navigation bar for quick access to key sections. This structure transforms the linear document into a modern, user-friendly SPA, allowing non-sequential exploration. The flow starts with a high-level overview (Introduction & Novelty), then drills down into specifics like Objectives, Features, and Technology. The core interactive element is a toggle to switch between Core and Advanced functionalities, encouraging user engagement. This design was chosen to make the academic content more digestible and engaging for a digital audience. -->
+    <!-- Visualization & Content Choices: Report Info (Project Synopsis) -> Goal (Inform, Organize, Compare) -> Presentation Method (Styled Cards, Icon Lists, Toggled Tables, Side-by-Side Columns) -> Interaction (Smooth Scrolling, Active Nav Highlighting, Toggle Clicks) -> Justification (Modernizes the static document, improves navigability, and encourages exploration of technical details) -> Library/Method (Vanilla JS for interactivity, Tailwind CSS for styling). No charts were needed as the source is purely textual. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .nav-link.active {
+            color: #ffffff;
+            background-color: #2563eb;
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .functionality-toggle {
+            background-color: #e5e7eb;
+            transition: background-color 0.3s ease;
+        }
+        .functionality-toggle .toggle-knob {
+            transform: translateX(0);
+            transition: transform 0.3s ease;
+        }
+        .functionality-toggle.active {
+            background-color: #2563eb;
+        }
+        .functionality-toggle.active .toggle-knob {
+            transform: translateX(100%);
+        }
+        section {
+            scroll-margin-top: 80px;
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+        <nav class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-lg font-bold text-blue-600">
+                    Project Synopsis
+                </div>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#overview" class="nav-link px-3 py-2 text-sm font-medium text-slate-700 hover:bg-blue-500 hover:text-white rounded-md">Overview</a>
+                    <a href="#objectives" class="nav-link px-3 py-2 text-sm font-medium text-slate-700 hover:bg-blue-500 hover:text-white rounded-md">Objectives</a>
+                    <a href="#features" class="nav-link px-3 py-2 text-sm font-medium text-slate-700 hover:bg-blue-500 hover:text-white rounded-md">Features</a>
+                    <a href="#technology" class="nav-link px-3 py-2 text-sm font-medium text-slate-700 hover:bg-blue-500 hover:text-white rounded-md">Technology</a>
+                    <a href="#functionalities" class="nav-link px-3 py-2 text-sm font-medium text-slate-700 hover:bg-blue-500 hover:text-white rounded-md">Functionalities</a>
+                    <a href="#scope" class="nav-link px-3 py-2 text-sm font-medium text-slate-700 hover:bg-blue-500 hover:text-white rounded-md">Scope</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-4 md:p-8">
+
+        <section id="title-section" class="text-center py-16">
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Phishing Website Blocker</h1>
+            <p class="text-lg md:text-xl text-slate-600">An Interactive Project Synopsis</p>
+        </section>
+
+        <section id="overview" class="mb-16">
+            <h2 class="text-3xl font-bold text-slate-900 mb-6 text-center">Project Overview</h2>
+             <p class="text-center text-slate-600 mb-10 max-w-3xl mx-auto">This section introduces the project's core purpose and its unique contribution. It outlines the problem of phishing and presents the browser extension as a novel, user-focused solution to this critical cybersecurity challenge.</p>
+            <div class="grid md:grid-cols-2 gap-8 items-center bg-white p-8 rounded-xl shadow-md">
+                <div>
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-3">Introduction</h3>
+                    <p class="text-slate-600 leading-relaxed">This project focuses on developing a browser extension to combat phishing attacks. Phishing is a significant cybersecurity threat where fraudulent websites mimic legitimate ones to steal sensitive user data. This extension will provide an automated and proactive defense by detecting and blocking these malicious sites, thereby protecting users from financial and personal information loss.</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-3">Project Novelty</h3>
+                    <p class="text-slate-600 leading-relaxed">The novelty of this project lies in its single-user focus on providing a seamless, lightweight, and non-intrusive browsing experience. The extension will act as a personal security guard, providing instant, client-side protection and feedback against an evolving landscape of phishing threats.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="objectives" class="mb-16">
+            <h2 class="text-3xl font-bold text-slate-900 mb-6 text-center">Core Objectives</h2>
+            <p class="text-center text-slate-600 mb-10 max-w-3xl mx-auto">The project is guided by clear, measurable goals. This section details the key outcomes we aim to achieve, from the initial design and development to the final implementation of its user-facing alert systems.</p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="text-4xl text-blue-500 mb-3">🎨</div>
+                    <h3 class="font-semibold mb-2">User-Friendly Design</h3>
+                    <p class="text-sm text-slate-600">Design and develop a functional and intuitive browser extension.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="text-4xl text-blue-500 mb-3">🔍</div>
+                    <h3 class="font-semibold mb-2">Real-time Detection</h3>
+                    <p class="text-sm text-slate-600">Implement an effective system for real-time identification of phishing URLs.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="text-4xl text-blue-500 mb-3">🛡️</div>
+                    <h3 class="font-semibold mb-2">Site Blocking</h3>
+                    <p class="text-sm text-slate-600">Program the extension to block access to identified malicious websites.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="text-4xl text-blue-500 mb-3">🔔</div>
+                    <h3 class="font-semibold mb-2">Clear User Alerts</h3>
+                    <p class="text-sm text-slate-600">Create an informative UI to alert the user when a site is blocked.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="mb-16">
+            <h2 class="text-3xl font-bold text-slate-900 mb-6 text-center">Key Features</h2>
+            <p class="text-center text-slate-600 mb-10 max-w-3xl mx-auto">This section highlights the primary features that define the extension's functionality. Each feature is designed to provide robust security while maintaining a smooth and uninterrupted user experience.</p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                 <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-semibold text-lg mb-2">Real-Time URL Scanning</h3>
+                    <p class="text-slate-600 text-sm">The extension actively checks every URL before the page loads, providing proactive threat detection.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-semibold text-lg mb-2">Automatic URL Blocking</h3>
+                    <p class="text-slate-600 text-sm">Malicious URLs are immediately blocked, preventing the user from visiting the site and being exposed to danger.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-semibold text-lg mb-2">Informative Alert Page</h3>
+                    <p class="text-slate-600 text-sm">Instead of a generic browser error, a custom page explains the specific threat to the user in simple terms.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <h3 class="font-semibold text-lg mb-2">Minimalist Design</h3>
+                    <p class="text-slate-600 text-sm">The extension operates efficiently in the background without slowing down browser performance.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="technology" class="mb-16">
+            <h2 class="text-3xl font-bold text-slate-900 mb-6 text-center">Technology Stack</h2>
+             <p class="text-center text-slate-600 mb-10 max-w-3xl mx-auto">The project is built using modern and standard web technologies. Here is a breakdown of the languages, APIs, and data sources that power the phishing blocker extension.</p>
+            <div class="bg-white p-8 rounded-xl shadow-md">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <h3 class="font-semibold text-lg mb-3 border-b pb-2">Languages</h3>
+                        <div class="flex justify-center space-x-4">
+                           <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">JavaScript</span>
+                           <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">HTML</span>
+                           <span class="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full">CSS</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg mb-3 border-b pb-2">Browser APIs</h3>
+                         <div class="flex justify-center">
+                           <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Chrome Extension API</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg mb-3 border-b pb-2">Data Sources</h3>
+                         <div class="flex justify-center">
+                           <span class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full">Phishing Database API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="functionalities" class="mb-16">
+            <h2 class="text-3xl font-bold text-slate-900 mb-6 text-center">Functionalities</h2>
+            <p class="text-center text-slate-600 mb-10 max-w-3xl mx-auto">Explore the extension's capabilities, from its essential operations to more advanced potential features. Use the toggle below to switch between the Core and Advanced functionalities of the project.</p>
+            <div class="flex justify-center items-center space-x-4 mb-8">
+                <span id="coreLabel" class="font-medium text-blue-600">Core</span>
+                <button id="functionalityToggle" class="functionality-toggle relative inline-flex items-center h-6 rounded-full w-11 focus:outline-none">
+                    <span class="toggle-knob inline-block w-4 h-4 transform bg-white rounded-full"></span>
+                </button>
+                <span id="advancedLabel" class="font-medium text-slate-400">Advanced</span>
+            </div>
+
+            <div id="coreFunctionalities" class="bg-white p-6 rounded-xl shadow-md overflow-x-auto">
+                <table class="w-full text-left">
+                    <thead>
+                        <tr class="border-b">
+                            <th class="p-4 text-lg font-semibold text-blue-600">Core Functionality</th>
+                            <th class="p-4 text-lg font-semibold text-blue-600">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b">
+                            <td class="p-4 font-medium">URL Comparison</td>
+                            <td class="p-4 text-slate-600">The extension fetches the URL of a requested webpage and compares it against a pre-compiled list of known phishing websites.</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="p-4 font-medium">Request Interception</td>
+                            <td class="p-4 text-slate-600">Upon a successful match, the extension intercepts the network request and prevents the browser from loading the malicious content.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-medium">Threat Notification</td>
+                            <td class="p-4 text-slate-600">A custom HTML page is loaded to display a clear warning message to the user, explaining that the site is a phishing threat.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="advancedFunctionalities" class="hidden bg-white p-6 rounded-xl shadow-md overflow-x-auto">
+                <table class="w-full text-left">
+                     <thead>
+                        <tr class="border-b">
+                            <th class="p-4 text-lg font-semibold text-blue-600">Advanced Functionality</th>
+                            <th class="p-4 text-lg font-semibold text-blue-600">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b">
+                            <td class="p-4 font-medium">Heuristic Analysis</td>
+                            <td class="p-4 text-slate-600">The extension could use simple heuristics, such as analyzing the URL's structure and the presence of unusual characters, to detect potential phishing sites not yet in the database.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-medium">User-Initiated Reporting</td>
+                            <td class="p-4 text-slate-600">A feature that allows users to report a suspicious website to help improve the accuracy and coverage of the phishing database.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <section id="scope" class="mb-16">
+            <h2 class="text-3xl font-bold text-slate-900 mb-6 text-center">Scope & Limitations</h2>
+            <p class="text-center text-slate-600 mb-10 max-w-3xl mx-auto">This section defines the project's boundaries, outlining what the extension is designed to do while also acknowledging its operational constraints and areas for future improvement.</p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                     <h3 class="text-2xl font-semibold text-blue-600 mb-3">Project Scope</h3>
+                     <p class="text-slate-600 leading-relaxed">The scope of this project is to develop a functional browser extension that provides basic protection against phishing websites based on a database of known URLs. The project's success will be measured by its ability to accurately block access to phishing sites and provide clear, timely user alerts.</p>
+                </div>
+                 <div class="bg-white p-8 rounded-xl shadow-md border-l-4 border-amber-400">
+                     <h3 class="text-2xl font-semibold text-amber-600 mb-3">Limitations</h3>
+                     <p class="text-slate-600 leading-relaxed">The extension's effectiveness is limited by the completeness and freshness of the phishing URL database. It may not be able to protect against new phishing sites that have not yet been cataloged. Additionally, it cannot protect against phishing attacks that do not occur via a web browser (e.g., email-based attacks).</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="conclusion" class="text-center bg-blue-600 text-white py-16 px-8 rounded-xl">
+             <h2 class="text-3xl font-bold mb-4">Conclusion</h2>
+             <p class="max-w-3xl mx-auto leading-relaxed">The phishing website blocker browser extension is a vital tool for enhancing user security. It offers a straightforward and accessible solution to a prevalent cyber threat. This project demonstrates a practical application of cybersecurity principles to create a tool that can make a tangible difference in protecting online users.</p>
+        </section>
+
+    </main>
+    
+    <footer class="text-center py-10 text-slate-500">
+        <div class="mb-4">
+            <p class="font-semibold">Florina Sharma (2822476)</p>
+            <p class="text-sm">B.Tech, Computer Science & Engineering (Cyber Security)</p>
+        </div>
+        <div>
+            <p class="font-semibold">Under the Supervision of Shruti Jindal Ma'am</p>
+            <p class="text-sm">Assistant Professor, Panipat Institute of Engineering & Technology</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const functionalityToggle = document.getElementById('functionalityToggle');
+            const coreFunctionalities = document.getElementById('coreFunctionalities');
+            const advancedFunctionalities = document.getElementById('advancedFunctionalities');
+            const coreLabel = document.getElementById('coreLabel');
+            const advancedLabel = document.getElementById('advancedLabel');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            const href = link.getAttribute('href').substring(1);
+                            link.classList.toggle('active', href === entry.target.id);
+                        });
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            functionalityToggle.addEventListener('click', () => {
+                functionalityToggle.classList.toggle('active');
+                const isActive = functionalityToggle.classList.contains('active');
+
+                coreFunctionalities.classList.toggle('hidden', isActive);
+                advancedFunctionalities.classList.toggle('hidden', !isActive);
+
+                if (isActive) {
+                    advancedLabel.classList.remove('text-slate-400');
+                    advancedLabel.classList.add('text-blue-600');
+                    coreLabel.classList.add('text-slate-400');
+                    coreLabel.classList.remove('text-blue-600');
+                } else {
+                    coreLabel.classList.remove('text-slate-400');
+                    coreLabel.classList.add('text-blue-600');
+                    advancedLabel.classList.add('text-slate-400');
+                    advancedLabel.classList.remove('text-blue-600');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
